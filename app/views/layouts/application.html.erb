@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DemoTeachAssistantApp</title>
+    <title>Demo</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,8 +13,9 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <div class="container">
-      <%= yield %>
+    <div class="wrapper">
+      <%= render 'layouts/navbar_menu' %>
+      <%= render 'layouts/main_container' %>
     </div>
   </body>
 </html>
