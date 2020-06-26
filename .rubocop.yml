@@ -1,0 +1,42 @@
+AllCops:
+  Exclude:
+    - "db/schema.rb"
+    - "db/legacy_schema.rb"
+    - "db/seeds.rb"
+    - "script/**/*"
+    - "bin/**/*"
+    - "node_modules/**/*"
+
+
+Layout/ArrayAlignment:
+  EnforcedStyle: with_fixed_indentation
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+Layout/LineLength:
+  AutoCorrect: true
+  Max: 85
+  Exclude:
+    - "config/initializers/devise.rb"
+
+Style/Documentation:
+  Enabled: false
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: consistent_comma
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Metrics/MethodLength:
+  Exclude:
+    - "db/**/*"
+  Max: 15
+Metrics/BlockLength:
+  Exclude:
+    - "config/environments/*"
+    - "lib/tasks/**/*"
