@@ -7,6 +7,7 @@ ruby "2.6.5"
 
 gem "bootsnap", ">= 1.4.2", require: false
 gem "jbuilder", "~> 2.7"
+gem "pg", "1.1.4"
 gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.3", ">= 6.0.3.2"
 gem "sass-rails", ">= 6"
@@ -15,22 +16,24 @@ gem "view_component"
 gem "webpacker", "~> 4.0"
 
 group :development, :test do
+  gem "awesome_print", "~> 1.8"
   gem "byebug", platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
-  gem "sqlite3", "~> 1.4"
-  gem "web-console", ">= 3.3.0"
+  gem "listen",                ">= 3.0.5", "< 3.2"
+  gem "rubocop",               "~> 0.83"
+  gem "spring",                "~> 2.1.0"
+  gem "spring-watcher-listen", "~> 2.0.0"
+  gem "web-console",           ">= 3.3.0"
 end
 
 group :test do
-  gem "capybara", ">= 2.15"
+  gem "capybara", "~> 3.32"
+  gem "minitest-focus", "~> 1.2"
+  gem "mocha",          "~> 1.11"
   gem "selenium-webdriver"
   gem "webdrivers"
-end
-
-group :production do
-  gem "pg", "1.1.4"
 end
 
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
